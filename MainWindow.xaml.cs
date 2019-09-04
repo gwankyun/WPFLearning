@@ -40,6 +40,15 @@ namespace WPFLearning
                 tbxContent.Text = "";
             }
         }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var item = lvUsers.SelectedItem as User;
+            if (item != null)
+            {
+                users.Remove(item);
+            }
+        }
     }
     public class User : INotifyPropertyChanged
     {
